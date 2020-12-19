@@ -32,10 +32,10 @@ public class Test02 {
         StringBuilder s2 = nodeToString(l2);
         s1.reverse();
         s2.reverse();
-        Integer sum = Integer.valueOf(s1.toString())+Integer.valueOf(s2.toString());
+        Integer sum = Integer.parseInt(s1.toString())+Integer.parseInt(s2.toString());
         String sumStr = sum+"";
         char[] chars = sumStr.toCharArray();
-        ListNode dad = new ListNode(Integer.valueOf(chars[0]+""));
+        ListNode dad = new ListNode(Integer.parseInt(chars[0]+""));
         for (int i = 1; i < chars.length; i++) {
             dad = new ListNode( Integer.valueOf(chars[i]+""), dad);
         }
