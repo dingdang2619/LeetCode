@@ -3,6 +3,9 @@ package study.array_queue;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * 数组模拟队列
+ */
 public class ArrayQueue {
     private int maxSize = 10;   //数组初始大小
     private int start;  //队列头（含）
@@ -27,6 +30,11 @@ public class ArrayQueue {
         size = 0;
     }
 
+    /**
+     * 元素入队列前需判断是否超过数组大小
+     *     如果超过则增大数组maxSize
+     * @param n    添加的元素
+     */
     public void add(int n) {
         if (end < maxSize - 1) {
             queue[++end] = n;
@@ -42,6 +50,10 @@ public class ArrayQueue {
         }
     }
 
+    /**
+     * 弹出后判断数组实际大小是否小于maxSize/2 如果小于 缩小数组大小 节省空间
+     * @return  出队列的元素
+     */
     public int pop() {
         if (size <= 0) {
             return -1;
@@ -67,8 +79,8 @@ public class ArrayQueue {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("[");
-        for (int i : queue) {
-            sb.append(i).append(",");
+        for (int i = 0; i < size; i++) {
+            sb.append(queue[i]).append(",");
         }
         sb.deleteCharAt(sb.length() - 1);
         sb.append("]");
