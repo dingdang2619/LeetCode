@@ -12,17 +12,12 @@ import java.util.ArrayList;
  */
 public class Test06NO {
     public int getDecimalValue(ListNode head) {
-//        ArrayList<Integer> list = new ArrayList<>();
-//        ListNode cur = head;
-//        while(cur != null){
-//            list.add(cur.val);
-//            cur = cur.next;
-//        }
-//        int[] ints = new int[list.size()];
-//        for (int i = 0; i < list.size(); i++) {
-//            ints[i] = list.get(i);
-//        }
-//        Integer.parseInt(new String(ints))
-        return 0;
+        ListNode cur = head;
+        StringBuilder sb = new StringBuilder();
+        while(cur != null){
+            sb.append(cur.val);
+            cur = cur.next;
+        }
+        return Integer.parseInt(sb.toString(), 2);
     }
 }
