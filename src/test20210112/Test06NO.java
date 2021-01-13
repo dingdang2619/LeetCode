@@ -23,5 +23,6 @@ public class Test06NO {
 //            ints[i] = list.get(i);
 //        }
 //        Integer.parseInt(new String(ints))
+        return 0;
     }
 }
